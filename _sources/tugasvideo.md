@@ -1,4 +1,4 @@
-# Tugas 1
+# Tugas Video
 
 Membuat video cara membuat website statis menggunakan jupyter-book
 
