@@ -182,6 +182,11 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas2.html">Tugas 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugasvideo.html">Tugas Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aljabar.html">Operasi Bilangan Matriks</a></li>
+
+
+
+
 </ul>
 
     </div>
@@ -377,8 +382,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaannya-adalah">Persamaannya adalah</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berikut-gambar-persamaannya">Berikut Gambar Persamaannya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaaan-linear">Persamaaan Linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-linear">Contoh persamaan linear</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penerapan-eliminasi-gauss">contoh penerapan eliminasi Gauss</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -392,6 +403,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tugas-1">
 <h1>Tugas 1<a class="headerlink" href="#tugas-1" title="Link to this heading">#</a></h1>
+<section id="persamaaan-linear">
+<h2>Persamaaan Linear<a class="headerlink" href="#persamaaan-linear" title="Link to this heading">#</a></h2>
+<p>Persamaan linear adalah persamaan matematika yang menggambarkan hubungan linear antara variabel-variabelnya. Secara umum, persamaan linear dapat ditulis dalam bentuk:</p>
+<p><span class="math notranslate nohighlight">\( y=mx+by=mx+b \)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(y\)</span> adalah variabel dependen, <span class="math notranslate nohighlight">\(x\)</span> adalah variabel independen, <span class="math notranslate nohighlight">\(m\)</span> adalah kemiringan (slope), dan <span class="math notranslate nohighlight">\(b\)</span> adalah perpotongan dengan sumbu <span class="math notranslate nohighlight">\(y\)</span> (y-intercept). Persamaan ini menggambarkan garis lurus pada bidang Cartesius. Dalam konteks yang lebih umum, persamaan linear dapat memiliki lebih dari satu variabel dan dapat diwakili dalam bentuk umum:</p>
+<p><span class="math notranslate nohighlight">\(a_1x_1+a_2x_2+…+a_nx_n=b\)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(a_1,a_2,…,a_n​\)</span> adalah koefisien, <span class="math notranslate nohighlight">\(x_1,x_2,…,x_n\)</span>​ adalah variabel-variabel, dan bb adalah konstanta. Persamaan linear ini bisa menggambarkan hubungan linear antara lebih dari satu variabel.</p>
+<section id="contoh-persamaan-linear">
+<h3>Contoh persamaan linear<a class="headerlink" href="#contoh-persamaan-linear" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -414,6 +434,29 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Jadi, ketiga persamaan linier tiga variabel diatas adalah sebagai berikut</p>
+<p><span class="math notranslate nohighlight">\( 8x_1 + 9x_2 + x_3 = 19 \)</span></p>
+<p><span class="math notranslate nohighlight">\( x_1 + 2x_2 + 3x_3 = 9 \)</span></p>
+<p><span class="math notranslate nohighlight">\( 2x_1 + x_2 + x_3 = 5 \)</span></p>
+</section>
+</section>
+<section id="eliminasi-gauss">
+<h2>Eliminasi Gauss<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h2>
+<p>Eliminasi Gauss adalah metode yang digunakan dalam aljabar linier untuk menyelesaikan sistem persamaan linear. Tujuannya adalah untuk mentransformasi sistem persamaan linear menjadi bentuk yang lebih sederhana, yang memudahkan untuk menemukan solusi sistem tersebut.</p>
+<p>Langkah-langkah eliminasi Gauss adalah sebagai berikut:</p>
+<ol class="arabic simple">
+<li><p><strong>Pemilihan Pivot</strong>: Pilih elemen non-nol pertama dari baris pertama, yang disebut sebagai elemen pivot. Ini biasanya elemen pertama yang bukan nol.</p></li>
+<li><p><strong>Operasi Baris</strong>: Gunakan elemen pivot untuk membuat nol semua elemen di bawahnya dalam kolom yang sama. Ini dilakukan dengan mengurangi kelipatan dari baris pivot dari baris-baris di bawahnya.</p></li>
+<li><p><strong>Iterasi</strong>: Langkah operasi baris di atas diulang untuk setiap baris, dimulai dari baris kedua, ketiga, dan seterusnya.</p></li>
+</ol>
+<p>Setelah langkah-langkah di atas dilakukan, sistem persamaan linear akan berada dalam bentuk segitiga atas (upper triangular form). Dalam bentuk ini, mudah untuk menemukan solusi sistem menggunakan metode substitusi atau metode balikan (backward substitution).</p>
+<section id="contoh-penerapan-eliminasi-gauss">
+<h3>contoh penerapan eliminasi Gauss<a class="headerlink" href="#contoh-penerapan-eliminasi-gauss" title="Link to this heading">#</a></h3>
+<p>Untuk penerapan eliminasi Gauss, saya kita bisa mengambil contoh persamaan linier yang diatas</p>
+<p><span class="math notranslate nohighlight">\( 8x_1 + 9x_2 + x_3 = 19 \)</span></p>
+<p><span class="math notranslate nohighlight">\( x_1 + 2x_2 + 3x_3 = 9 \)</span></p>
+<p><span class="math notranslate nohighlight">\( 2x_1 + x_2 + x_3 = 5 \)</span></p>
+<p>Pertama-tama kita menulis kode program untuk digunakan pada perhitungan persamaan linier dengan cara eliminasi Gauss</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
@@ -467,9 +510,11 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Setelah menulis kode program tersebut, kita mendapatkan tiga fungsi, yaitu <strong>RowSwap</strong>,<strong>RowScale</strong>, dan <strong>RowAdd</strong>. Setelah itu, kita terapkan pada persamaan yang telah kita tulis diatas</p>
+<p>Tahap pertama, yaitu menukar posisi persamaan ke-1 dengan persamaan ke-2 dengan fungsi <strong>RowSwap</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#index python dimulai dari 0,1,2, dan seterusnya</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">A1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -482,6 +527,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Tahap kedua yaitu menambahkan -8 kali persamaan ke-1 ke persamaan ke-2 dengan fungsi <strong>RowAdd</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A2</span> <span class="o">=</span> <span class="n">RowAdd</span> <span class="p">(</span><span class="n">A1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span>
@@ -497,6 +543,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Tahap ketiga yaitu menambahkan -2 kali persamaan ke-1 ke persamaan ke-3</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A3</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">A2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
@@ -512,6 +559,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Tahap keempat yaitu mengalikan persamaan ke-2 dengan 1/7 dengan fungsi <strong>RowScale</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A4</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">A3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">7</span><span class="p">)</span>
@@ -527,6 +575,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Tahap kelima yaitu menambahkan 3 kali persamaan ke-2 ke persamaan ke-3</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A5</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">A4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
@@ -542,6 +591,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Tahap keenam yaitu mengalikan persamaan-3 dengan 1/4.85714286 (agar nilai <span class="math notranslate nohighlight">\(x_3\)</span> persamaan ke-3 bernilai 1)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A6</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">A5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mf">4.85714286</span><span class="p">)</span>
@@ -557,12 +607,11 @@ document.write(`
 </div>
 </div>
 </div>
-<section id="persamaannya-adalah">
-<h2>Persamaannya adalah<a class="headerlink" href="#persamaannya-adalah" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\( x_1 + 2x_2 + 3x_3 = 9\\
-         x_2 + 3.28571429x_3 = 7.57142857\\
-                         x_3 = 2\\ 
-  \)</span></p>
+<p>Setelah dilakukan penghitungan akan didapatkan persamaan sebagai berikut</p>
+<p><span class="math notranslate nohighlight">\( x_1 + 2x_2 + 3x_3 = 9\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_2 + 3.28571429x_3 = 7.57142857\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_3 = 2 \)</span></p>
+<p>Maka, bisa didapat bahwa nilai dari <span class="math notranslate nohighlight">\(x_3\)</span> adalah <span class="math notranslate nohighlight">\(2\)</span>. Dengan begitu kita bisa mencari nilai <span class="math notranslate nohighlight">\(x_1\)</span> dan <span class="math notranslate nohighlight">\(x_2\)</span> dengan cara substitusi sebagai berikut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x3</span> <span class="o">=</span> <span class="mi">2</span>
@@ -590,13 +639,12 @@ document.write(`
 </div>
 </div>
 </div>
+<p>Jadi, bisa didapat nilai dari <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, dan <span class="math notranslate nohighlight">\(x_3\)</span> sebagai berikut</p>
 <p><span class="math notranslate nohighlight">\( x_1 = 1\\
   x_2 = 1\\
   x_3 = 2\\
   \)</span></p>
-</section>
-<section id="berikut-gambar-persamaannya">
-<h2>Berikut Gambar Persamaannya<a class="headerlink" href="#berikut-gambar-persamaannya" title="Link to this heading">#</a></h2>
+<p>Kita bisa menggambar persamaannya di matplotlib dengan kode program sebagai berikut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -659,6 +707,7 @@ document.write(`
 <img alt="_images/47b3517a0b8274db5d4e33b127ad9152758dcb9bee8283699c9b127df37db30d.png" src="_images/47b3517a0b8274db5d4e33b127ad9152758dcb9bee8283699c9b127df37db30d.png" />
 </div>
 </div>
+</section>
 </section>
 </section>
 
@@ -726,8 +775,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaannya-adalah">Persamaannya adalah</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berikut-gambar-persamaannya">Berikut Gambar Persamaannya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaaan-linear">Persamaaan Linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-linear">Contoh persamaan linear</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-penerapan-eliminasi-gauss">contoh penerapan eliminasi Gauss</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
