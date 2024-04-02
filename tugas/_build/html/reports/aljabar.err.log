@@ -15,14 +15,24 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-A @ C = I
+C = RowSwap(,0,2)
+print(1)
+B2 = RowAdd(B1,0,1,-4)
+print(B2)
+B3 = RowAdd(B2,0,2,-2)
+print(B3)
+B4 = RowSwap(B3,1,2)
+print(B4)
+B5 = RowAdd(B4,1,2,-2)
+print(B5)
+
 
 ------------------
 
 
-[0;36m  Cell [0;32mIn[2], line 1[0;36m[0m
-[0;31m    A @ C = I[0m
-[0m    ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m cannot assign to expression here. Maybe you meant '==' instead of '='?
+[0;36m  Cell [0;32mIn[35], line 1[0;36m[0m
+[0;31m    C = RowSwap(,0,2)[0m
+[0m                ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
 
 

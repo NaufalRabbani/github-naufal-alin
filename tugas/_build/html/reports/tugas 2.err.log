@@ -15,24 +15,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-C = RowSwap(,0,2)
-print(1)
-B2 = RowAdd(B1,0,1,-4)
-print(B2)
-B3 = RowAdd(B2,0,2,-2)
-print(B3)
-B4 = RowSwap(B3,1,2)
-print(B4)
-B5 = RowAdd(B4,1,2,-2)
-print(B5)
-
-
+BI11 = RowAdd(B10,3,1,5)
+print(BI11)
 ------------------
 
 
-[0;36m  Cell [0;32mIn[35], line 1[0;36m[0m
-[0;31m    C = RowSwap(,0,2)[0m
-[0m                ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[22], line 1[0m
+[0;32m----> 1[0m BI11 [38;5;241m=[39m RowAdd([43mB10[49m,[38;5;241m3[39m,[38;5;241m1[39m,[38;5;241m5[39m)
+[1;32m      2[0m [38;5;28mprint[39m(BI11)
 
+[0;31mNameError[0m: name 'B10' is not defined
 
