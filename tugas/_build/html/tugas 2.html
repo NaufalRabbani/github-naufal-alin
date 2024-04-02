@@ -628,15 +628,36 @@ contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \t
 <li><p><span class="math notranslate nohighlight">\( 5x_1 + 4x_2 + 3x_3 + x_4 = 11\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( 6x_1 + 5x_2 + 4x_3 + 2x_4 = 14\)</span></p></li>
 </ul>
-<p>Setelah itu, kita ubah menjadi augmented matrix yang ditambahkan dengan matriks identitas. Kita lambangkan sebagai matriks <span class="math notranslate nohighlight">\(BI\)</span></p>
-<p><span class="math notranslate nohighlight">\(BI =
+<p>Kita buat persamaan <span class="math notranslate nohighlight">\(AX = B\)</span> dalam bentuk matriks</p>
+<p><span class="math notranslate nohighlight">\(AX = B \\
+\begin{bmatrix}
+2 &amp; 1 &amp; 1 &amp; 3 \\
+1 &amp; 3 &amp; 2 &amp; 5 \\
+5 &amp; 4 &amp; 3 &amp; 1 \\
+6 &amp; 5 &amp; 4 &amp; 2 
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_1 \\ 
+x_2 \\ 
+x_3 \\
+x_4 \\
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(=\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+6 \\ 
+10 \\
+11 \\
+14  
+\end{bmatrix}\)</span></p>
+<p>Setelah itu, kita ubah menjadi augmented matrix yang ditambahkan dengan matriks identitas. Kita lambangkan sebagai matriks <span class="math notranslate nohighlight">\(AI\)</span></p>
+<p><span class="math notranslate nohighlight">\(AI =
 \begin {bmatrix}
 2 &amp; 1 &amp; 1 &amp; 3 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
 1 &amp; 3 &amp; 2 &amp; 5 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
 5 &amp; 4 &amp; 3 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
 6 &amp; 5 &amp; 4 &amp; 2 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
 \end {bmatrix}\)</span></p>
-<p>Setelah itu kita operasikan hingga menghasilkan matriks <span class="math notranslate nohighlight">\(IB^{-1}\)</span></p>
+<p>Setelah itu kita operasikan hingga menghasilkan matriks <span class="math notranslate nohighlight">\(IA^{-1}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy</span>
@@ -871,19 +892,16 @@ contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \t
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BI11</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BI11</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">BI10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">BI11</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">BI11</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">BI11</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;B10&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[  0.   1.   0. -28.  -8.  -2.   0.   3.]
+ [  0.   0.   1.  49.  13.   4.   0.  -5.]
+ [ -2.   0.   0.   7.   1.   1.  -1.   0.]
+ [ -1.   0.   0.   9.   2.   1.   0.  -1.]]
 </pre></div>
 </div>
 </div>
@@ -896,10 +914,13 @@ contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \t
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[  0.   1.   0. -28.  -8.  -2.   0.   3.]
- [  0.   0.   1.  49.  13.   4.   0.  -5.]
- [  0.   0.   0. -11.  -3.  -1.  -1.   2.]
- [ -1.   0.   0.   9.   2.   1.   0.  -1.]]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">BI12</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B11</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">BI12</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;B11&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1066,21 +1087,75 @@ contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \t
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
 <span class="n">BS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">BS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.63636364  0.45454545 -0.18181818  0.81818182]
- [-2.09090909 -0.36363636  0.54545455  2.54545455]
- [ 3.90909091 -0.36363636 -0.45454545 -4.45454545]
- [-0.18181818  0.27272727  0.09090909  0.09090909]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.45454545 -0.18181818  0.81818182 -0.63636364]
+ [-0.36363636  0.54545455  2.54545455 -2.09090909]
+ [-0.36363636 -0.45454545 -4.45454545  3.90909091]
+ [ 0.27272727  0.09090909  0.09090909 -0.18181818]]
 </pre></div>
 </div>
 </div>
 </div>
+<p><span class="math notranslate nohighlight">\(AX = B \\
+A^{-1}A X = A^{-1}B
+IX = A^{-1}B\)</span></p>
+<p>Setelah ketemu invers matriksnya kita operasikan untuk menemukan X dengan mengalikan matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> dengan matriks <span class="math notranslate nohighlight">\(B\)</span></p>
+<p><span class="math notranslate nohighlight">\(IX = A^{-1}B\)</span></p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_1 \\ 
+x_2 \\ 
+x_3 \\
+x_4 \\
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(=\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+0.45454545 &amp; -0.18181818 &amp; 0.81818182 &amp; -0.63636364 \\
+-0.36363636 &amp; 0.54545455 &amp; 2.54545455 &amp; -2.09090909 \\
+-0.36363636 &amp; -0.45454545 &amp; -4.45454545 &amp; 3.90909091 \\
+0.27272727 &amp; 0.09090909 &amp; 0.09090909 &amp; -0.18181818
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+6 \\ 
+10 \\
+11 \\
+14  
+\end{bmatrix}\)</span></p>
+<p>Setelah itu kita operasikan menggunakan fungsi <strong>NumPy</strong> pada Python</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span> <span class="p">([[</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">14</span><span class="p">]])</span>
+<span class="n">BT</span> <span class="o">=</span> <span class="n">B</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span> 
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">BS</span><span class="p">,</span><span class="n">BT</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.]
+ [ 2.]
+ [-1.]
+ [ 1.]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dari operasi diatas bisa kita dapatkan nilai dari <span class="math notranslate nohighlight">\(x_1, x_2, x_3, x_4\)</span> adalah</p>
+<p><span class="math notranslate nohighlight">\(x_1 = 1 \\
+x_2 = 2 \\
+x_3 = -1 \\
+x_4 = 1\)</span></p>
 </section>
 </section>
 

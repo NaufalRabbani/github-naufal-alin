@@ -15,16 +15,16 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-BI11 = RowAdd(B10,3,1,5)
-print(BI11)
+BI12 = RowAdd(B11,3,2,-2)
+print(BI12)
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[22], line 1[0m
-[0;32m----> 1[0m BI11 [38;5;241m=[39m RowAdd([43mB10[49m,[38;5;241m3[39m,[38;5;241m1[39m,[38;5;241m5[39m)
-[1;32m      2[0m [38;5;28mprint[39m(BI11)
+Cell [0;32mIn[23], line 1[0m
+[0;32m----> 1[0m BI12 [38;5;241m=[39m RowAdd([43mB11[49m,[38;5;241m3[39m,[38;5;241m2[39m,[38;5;241m-[39m[38;5;241m2[39m)
+[1;32m      2[0m [38;5;28mprint[39m(BI12)
 
-[0;31mNameError[0m: name 'B10' is not defined
+[0;31mNameError[0m: name 'B11' is not defined
 
