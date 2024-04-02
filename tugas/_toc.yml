@@ -5,6 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: tugas1
-- file: tugas2
-- file: tugasvideo
+- file: tugas 2
 - file: aljabar
+- file: tugasvideo
