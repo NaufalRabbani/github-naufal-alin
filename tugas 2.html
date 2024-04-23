@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -57,8 +57,6 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas 2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -396,37 +394,37 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="matriks-invers">
+  <section id="matriks-invers">
 <h1>Matriks Invers<a class="headerlink" href="#matriks-invers" title="Link to this heading">#</a></h1>
-<p>Matriks invers adalah kebalikan dari suatu matriks. jadi jika dilambangkan suatu matriks adalah matriks <span class="math notranslate nohighlight">\(A\)</span> maka kebalikan atau invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> adalah matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span>. Matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> dapat dikatakan invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> jika memenuhi syarat apabila matriks <span class="math notranslate nohighlight">\(A\)</span> dikalikan dengan matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> menghasilkan matriks <span class="math notranslate nohighlight">\(I\)</span> yang mana matriks <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas</p>
+<p>Matriks invers adalah kebalikan dari suatu matriks. jadi jika dilambangkan suatu matriks adalah matriks $A$ maka kebalikan atau invers dari matriks $A$ adalah matriks $A^{-1}$. Matriks $A^{-1}$ dapat dikatakan invers dari matriks $A$ jika memenuhi syarat apabila matriks $A$ dikalikan dengan matriks $A^{-1}$ menghasilkan matriks $I$ yang mana matriks $I$ adalah matriks identitas</p>
 <section id="sifat-sifat-matriks-invers">
 <h2>Sifat sifat Matriks Invers<a class="headerlink" href="#sifat-sifat-matriks-invers" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Invers dari matriks Invers adalah matriks itu sendiri, contoh invers dari matrik <span class="math notranslate nohighlight">\(A^{-1}\)</span> adalah matriks <span class="math notranslate nohighlight">\(A\)</span> itu sendiri</p></li>
-<li><p>Perkalian matriks dengan inversnya akan menghasilkan matriks identitas, contoh <span class="math notranslate nohighlight">\(A \times A^{-1} = A^{-1} \times A = I \)</span></p></li>
-<li><p>Invers dari perkalian dua matriks adalah hasil dari perkalian inversnya dalam urutan terbalik, contoh <span class="math notranslate nohighlight">\((AB)^{-1} = B^{-1}A^{-1} \)</span></p></li>
-<li><p>Invers dari matriks transpose adalah transpose dari matriks invers, contoh <span class="math notranslate nohighlight">\((A^T)^{-1} = (A^{-1})^T\)</span></p></li>
-<li><p>Invers dari matriks identitas adalah matriks identitas itu sendiri, contoh <span class="math notranslate nohighlight">\(I \times I^{-1} = I\)</span></p></li>
+<li><p>Invers dari matriks Invers adalah matriks itu sendiri, contoh invers dari matrik $A^{-1}$ adalah matriks $A$ itu sendiri</p></li>
+<li><p>Perkalian matriks dengan inversnya akan menghasilkan matriks identitas, contoh $A \times A^{-1} = A^{-1} \times A = I $</p></li>
+<li><p>Invers dari perkalian dua matriks adalah hasil dari perkalian inversnya dalam urutan terbalik, contoh $(AB)^{-1} = B^{-1}A^{-1} $</p></li>
+<li><p>Invers dari matriks transpose adalah transpose dari matriks invers, contoh $(A^T)^{-1} = (A^{-1})^T$</p></li>
+<li><p>Invers dari matriks identitas adalah matriks identitas itu sendiri, contoh $I \times I^{-1} = I$</p></li>
 </ul>
 </section>
 <section id="mencari-matriks-invers-dengan-metode-gauss-jordan">
 <h2>Mencari Matriks Invers dengan metode Gauss-Jordan<a class="headerlink" href="#mencari-matriks-invers-dengan-metode-gauss-jordan" title="Link to this heading">#</a></h2>
 <p>Metode Gauss Jordan adalah adalah salah satu metode eliminasi yang digunakan untuk menyelesaikan sistem persamaan linear dan mendapatkan solusi yang diberikan dengan cara diubah menjadi augmented matriks atau matriks yang diperluas yang disederhanakan menjadi bentuk baris yang tereduksi
-contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \times 3}\)</span></p>
-<p><span class="math notranslate nohighlight">\(A=
+contohnya diberikan matriks $A_{3 \times 3}$</p>
+<p>$A=
 \begin{bmatrix}
-1 &amp; 2 &amp; 3 \\
-0 &amp; 1 &amp; 4 \\
+1 &amp; 2 &amp; 3 \
+0 &amp; 1 &amp; 4 \
 5 &amp; 6 &amp; 0
-\end{bmatrix}\)</span></p>
-<p>Kemudian buat augmented matrix atau perluasan dari matriks <span class="math notranslate nohighlight">\(A\)</span> dengan menambahkan matriks identiitas sehingga membentuk matriks <span class="math notranslate nohighlight">\(AI\)</span></p>
-<p><span class="math notranslate nohighlight">\(AI =
+\end{bmatrix}$</p>
+<p>Kemudian buat augmented matrix atau perluasan dari matriks $A$ dengan menambahkan matriks identiitas sehingga membentuk matriks $AI$</p>
+<p>$AI =
 \begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 4 &amp; 0 &amp; 1 &amp; 0 \\
-5 &amp; 6 &amp; 0 &amp; 0 &amp; 0 &amp; 1 
-\end{bmatrix}\)</span></p>
-<p>Lakukan operasi sehingga menghasilkan matriks <span class="math notranslate nohighlight">\(IA^{-1}\)</span></p>
+1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \
+0 &amp; 1 &amp; 4 &amp; 0 &amp; 1 &amp; 0 \
+5 &amp; 6 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}$</p>
+<p>Lakukan operasi sehingga menghasilkan matriks $IA^{-1}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy</span>
@@ -574,15 +572,15 @@ contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \t
 </div>
 </div>
 </div>
-<p>Dari operasi diatas bisa didapatkan hasil invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> adalah</p>
-<p><span class="math notranslate nohighlight">\(A^{-1} = 
+<p>Dari operasi diatas bisa didapatkan hasil invers dari matriks $A$ adalah</p>
+<p>$A^{-1} =
 \begin{bmatrix}
--24 &amp; 18 &amp; 5 \\
-20 &amp; -15 &amp; -4 \\
+-24 &amp; 18 &amp; 5 \
+20 &amp; -15 &amp; -4 \
 -5 &amp; 4 &amp; 1
 \end{bmatrix}
-\)</span></p>
-<p>Sekarang kita cek apakah matriks <span class="math notranslate nohighlight">\(A\)</span> dikalikan dengan matrik <span class="math notranslate nohighlight">\(A^{-1}\)</span> sama dengan matriks <span class="math notranslate nohighlight">\(I\)</span> atau matriks identitas</p>
+$</p>
+<p>Sekarang kita cek apakah matriks $A$ dikalikan dengan matrik $A^{-1}$ sama dengan matriks $I$ atau matriks identitas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
@@ -623,41 +621,41 @@ contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \t
 <h2>Penyelesaian sistem persamaan linier dengan metode Gauss-Jordan (Persamaan 4 variabel)<a class="headerlink" href="#penyelesaian-sistem-persamaan-linier-dengan-metode-gauss-jordan-persamaan-4-variabel" title="Link to this heading">#</a></h2>
 <p>Diberi contoh persamaan linier 4 variabel sebagai berikut</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( 2x_1 + x_2 + x_3 + 3x_4 = 6\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( x_1 + 3x_2 + 2x_3 + 5x_4 = 10\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( 5x_1 + 4x_2 + 3x_3 + x_4 = 11\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\( 6x_1 + 5x_2 + 4x_3 + 2x_4 = 14\)</span></p></li>
+<li><p>$ 2x_1 + x_2 + x_3 + 3x_4 = 6$</p></li>
+<li><p>$ x_1 + 3x_2 + 2x_3 + 5x_4 = 10$</p></li>
+<li><p>$ 5x_1 + 4x_2 + 3x_3 + x_4 = 11$</p></li>
+<li><p>$ 6x_1 + 5x_2 + 4x_3 + 2x_4 = 14$</p></li>
 </ul>
-<p>Kita buat persamaan <span class="math notranslate nohighlight">\(AX = B\)</span> dalam bentuk matriks</p>
-<p><span class="math notranslate nohighlight">\(AX = B \\
+<p>Kita buat persamaan $AX = B$ dalam bentuk matriks</p>
+<p>$AX = B \
 \begin{bmatrix}
-2 &amp; 1 &amp; 1 &amp; 3 \\
-1 &amp; 3 &amp; 2 &amp; 5 \\
-5 &amp; 4 &amp; 3 &amp; 1 \\
-6 &amp; 5 &amp; 4 &amp; 2 
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_1 \\ 
-x_2 \\ 
-x_3 \\
-x_4 \\
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(=\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-6 \\ 
-10 \\
-11 \\
-14  
-\end{bmatrix}\)</span></p>
-<p>Setelah itu, kita ubah menjadi augmented matrix yang ditambahkan dengan matriks identitas. Kita lambangkan sebagai matriks <span class="math notranslate nohighlight">\(AI\)</span></p>
-<p><span class="math notranslate nohighlight">\(AI =
+2 &amp; 1 &amp; 1 &amp; 3 \
+1 &amp; 3 &amp; 2 &amp; 5 \
+5 &amp; 4 &amp; 3 &amp; 1 \
+6 &amp; 5 &amp; 4 &amp; 2
+\end{bmatrix}$
+$\begin{bmatrix}
+x_1 \
+x_2 \
+x_3 \
+x_4 \
+\end{bmatrix}$
+$=$
+$\begin{bmatrix}
+6 \
+10 \
+11 \
+14<br />
+\end{bmatrix}$</p>
+<p>Setelah itu, kita ubah menjadi augmented matrix yang ditambahkan dengan matriks identitas. Kita lambangkan sebagai matriks $AI$</p>
+<p>$AI =
 \begin {bmatrix}
-2 &amp; 1 &amp; 1 &amp; 3 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
-1 &amp; 3 &amp; 2 &amp; 5 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
-5 &amp; 4 &amp; 3 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
-6 &amp; 5 &amp; 4 &amp; 2 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
-\end {bmatrix}\)</span></p>
-<p>Setelah itu kita operasikan hingga menghasilkan matriks <span class="math notranslate nohighlight">\(IA^{-1}\)</span></p>
+2 &amp; 1 &amp; 1 &amp; 3 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \
+1 &amp; 3 &amp; 2 &amp; 5 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \
+5 &amp; 4 &amp; 3 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \
+6 &amp; 5 &amp; 4 &amp; 2 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \
+\end {bmatrix}$</p>
+<p>Setelah itu kita operasikan hingga menghasilkan matriks $IA^{-1}$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library numpy</span>
@@ -1100,36 +1098,36 @@ x_4 \\
 </div>
 </div>
 </div>
-<p><span class="math notranslate nohighlight">\(AX = B \\
+<p>$AX = B \
 A^{-1}A X = A^{-1}B
-IX = A^{-1}B\)</span></p>
-<p>Setelah ketemu invers matriksnya kita operasikan untuk menemukan X dengan mengalikan matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> dengan matriks <span class="math notranslate nohighlight">\(B\)</span></p>
-<p><span class="math notranslate nohighlight">\(IX = A^{-1}B\)</span></p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
+IX = A^{-1}B$</p>
+<p>Setelah ketemu invers matriksnya kita operasikan untuk menemukan X dengan mengalikan matriks $A^{-1}$ dengan matriks $B$</p>
+<p>$IX = A^{-1}B$</p>
+<p>$\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \
+0 &amp; 1 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 1 &amp; 0 \
 0 &amp; 0 &amp; 0 &amp; 1
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_1 \\ 
-x_2 \\ 
-x_3 \\
-x_4 \\
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(=\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-0.45454545 &amp; -0.18181818 &amp; 0.81818182 &amp; -0.63636364 \\
--0.36363636 &amp; 0.54545455 &amp; 2.54545455 &amp; -2.09090909 \\
--0.36363636 &amp; -0.45454545 &amp; -4.45454545 &amp; 3.90909091 \\
+\end{bmatrix}$
+$\begin{bmatrix}
+x_1 \
+x_2 \
+x_3 \
+x_4 \
+\end{bmatrix}$
+$=$
+$\begin{bmatrix}
+0.45454545 &amp; -0.18181818 &amp; 0.81818182 &amp; -0.63636364 \
+-0.36363636 &amp; 0.54545455 &amp; 2.54545455 &amp; -2.09090909 \
+-0.36363636 &amp; -0.45454545 &amp; -4.45454545 &amp; 3.90909091 \
 0.27272727 &amp; 0.09090909 &amp; 0.09090909 &amp; -0.18181818
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-6 \\ 
-10 \\
-11 \\
-14  
-\end{bmatrix}\)</span></p>
+\end{bmatrix}$
+$\begin{bmatrix}
+6 \
+10 \
+11 \
+14<br />
+\end{bmatrix}$</p>
 <p>Setelah itu kita operasikan menggunakan fungsi <strong>NumPy</strong> pada Python</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1149,11 +1147,11 @@ x_4 \\
 </div>
 </div>
 </div>
-<p>Dari operasi diatas bisa kita dapatkan nilai dari <span class="math notranslate nohighlight">\(x_1, x_2, x_3, x_4\)</span> adalah</p>
-<p><span class="math notranslate nohighlight">\(x_1 = 1 \\
-x_2 = 2 \\
-x_3 = -1 \\
-x_4 = 1\)</span></p>
+<p>Dari operasi diatas bisa kita dapatkan nilai dari $x_1, x_2, x_3, x_4$ adalah</p>
+<p>$x_1 = 1 \
+x_2 = 2 \
+x_3 = -1 \
+x_4 = 1$</p>
 </section>
 </section>
 

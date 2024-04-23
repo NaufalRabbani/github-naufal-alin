@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -57,8 +57,6 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'aljabar';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -409,7 +407,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aljabar-matriks">
+  <section id="aljabar-matriks">
 <h1>Aljabar Matriks<a class="headerlink" href="#aljabar-matriks" title="Link to this heading">#</a></h1>
 <p>Matriks adalah suatu susunan bilangan real atau bilangan kompleks (atau elemen-elemen) yang disusun dalam baris dan kolom sehingga membentuk jajaran persegi panjang. Suatu matriks diberi nama dengan menggunakan huruf kapital seperti A, B, C, dan seterusnya, sedangkan anggotanya dinyatakan dengan huruf kecil.</p>
 <p>Kita bisa membuat matriks di python dengan fungsi np.array yang nilainya bisa diisi sendiri</p>
@@ -448,9 +446,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7 3 5]
- [7 1 5]
- [3 9 4]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[9 1 6]
+ [5 7 0]
+ [4 2 9]]
 </pre></div>
 </div>
 </div>
@@ -459,7 +457,7 @@ document.write(`
 <h2>Operasi Bilangan Matriks<a class="headerlink" href="#operasi-bilangan-matriks" title="Link to this heading">#</a></h2>
 <section id="penjumlahan-matriks">
 <h3>Penjumlahan Matriks<a class="headerlink" href="#penjumlahan-matriks" title="Link to this heading">#</a></h3>
-<p>Penjumlahan Matriks pada dasarnya sama dengan penjumlahan bilangan, namun dengan salah satu syarat yaitu matriks yang dijumlahkan memiliki ordo yang sama. contohnya matriks <span class="math notranslate nohighlight">\(A\)</span> dengan ordo 2x2 dijumlahkan dengan matriks <span class="math notranslate nohighlight">\(B\)</span> dengan ordo 2x2 atau matriks <span class="math notranslate nohighlight">\(C\)</span> dengan ordo 3x3 dijumlahkan dengan matriks <span class="math notranslate nohighlight">\(D\)</span> dengan ordo 3x3</p>
+<p>Penjumlahan Matriks pada dasarnya sama dengan penjumlahan bilangan, namun dengan salah satu syarat yaitu matriks yang dijumlahkan memiliki ordo yang sama. contohnya matriks $A$ dengan ordo 2x2 dijumlahkan dengan matriks $B$ dengan ordo 2x2 atau matriks $C$ dengan ordo 3x3 dijumlahkan dengan matriks $D$ dengan ordo 3x3</p>
 <p>Berikut Sifat sifat Penjumlahan Matriks</p>
 <ol class="arabic simple">
 <li><p>Sifat komutatif.
@@ -471,20 +469,20 @@ Pada sifat ini berlaku A + 0 = A.</p></li>
 <li><p>Jika dijumlahkan dengan lawannya akan menghasilkan matriks nol, yaitu A + (-A) = 0.</p></li>
 </ol>
 <p>Contoh penjumlahan matriks</p>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 2\\
+<p>$\begin{bmatrix}
+1 &amp; 2\
 3 &amp; 4
-\end{bmatrix}\)</span>
+\end{bmatrix}$
 +
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-2 &amp; 4\\
+$\begin{bmatrix}
+2 &amp; 4\
 6 &amp; 8
-\end{bmatrix}\)</span>
+\end{bmatrix}$
 ::
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-3 &amp; 6\\
+$\begin{bmatrix}
+3 &amp; 6\
 9 &amp; 12
-\end{bmatrix}\)</span></p>
+\end{bmatrix}$</p>
 </section>
 <section id="perkalian-matriks">
 <h3>Perkalian Matriks<a class="headerlink" href="#perkalian-matriks" title="Link to this heading">#</a></h3>
@@ -494,10 +492,10 @@ Pada sifat ini berlaku A + 0 = A.</p></li>
 <p>Adalah suatu operasi yang mengalikan matriks dengan suatu nilai konstanta</p>
 <p>Contoh perkalian Matriks dengan Konstanta:
 Matriks M
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-1 &amp; 2\\
+$\begin{bmatrix}
+1 &amp; 2\
 3 &amp; 4
-\end{bmatrix}\)</span>
+\end{bmatrix}$
 dikalikan dengan konstanta bernilai 5</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -518,10 +516,10 @@ dikalikan dengan konstanta bernilai 5</p>
 </div>
 </div>
 <p>Hasilnya adalah Matriks N
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-5 &amp; 10\\
+$\begin{bmatrix}
+5 &amp; 10\
 15 &amp; 20
-\end{bmatrix}\)</span></p>
+\end{bmatrix}$</p>
 </section>
 <section id="perkalian-antarmatriks">
 <h4>2. Perkalian AntarMatriks<a class="headerlink" href="#perkalian-antarmatriks" title="Link to this heading">#</a></h4>
@@ -539,11 +537,11 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0 4 0]
- [2 5 7]]
-[[9 3]
- [9 2]
- [4 6]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[6 5 0]
+ [4 9 4]]
+[[6 9]
+ [1 7]
+ [1 0]]
 </pre></div>
 </div>
 </div>
@@ -559,10 +557,10 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[36  8]
- [91 58]]
-[[36  8]
- [91 58]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[41 89]
+ [37 99]]
+[[41 89]
+ [37 99]]
 </pre></div>
 </div>
 </div>
@@ -571,9 +569,9 @@ baris matriks yang dikalikan</p>
 </section>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="matriks-transpose">
+<section id="matriks-transpose">
 <h1>Matriks Transpose<a class="headerlink" href="#matriks-transpose" title="Link to this heading">#</a></h1>
-<p>Matriks transpose matriks yang merupakan hasil dari membalikkan baris dan kolom matriks itu sendiri. Jadi, baris dari matriks transpose adalah kolom dari matriks itu sendiri dan kolom dari matriks transpose adalah baris dari matriks itu sendiri. Misalkan terdapat sebuah matriks A dengan ukuran <span class="math notranslate nohighlight">\(3 \times 2\)</span>, jadi transpose dari matriks A adalah matriks A transpose dengan ukuran <span class="math notranslate nohighlight">\(2 \times 3\)</span></p>
+<p>Matriks transpose matriks yang merupakan hasil dari membalikkan baris dan kolom matriks itu sendiri. Jadi, baris dari matriks transpose adalah kolom dari matriks itu sendiri dan kolom dari matriks transpose adalah baris dari matriks itu sendiri. Misalkan terdapat sebuah matriks A dengan ukuran $3 \times 2$, jadi transpose dari matriks A adalah matriks A transpose dengan ukuran $2 \times 3$</p>
 <p>Penggunaan matriks transpose pada python adalah sebagai berikut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -598,9 +596,9 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
-<p>Terdapat matriks A dengan ukuran <span class="math notranslate nohighlight">\(3 \times 3\)</span> diatas. Cara menemukan transpose matriks A adalah dengan menggunakan fungsi A.transpose() pada python dan hasilnya seperti yang diatas</p>
+<p>Terdapat matriks A dengan ukuran $3 \times 3$ diatas. Cara menemukan transpose matriks A adalah dengan menggunakan fungsi A.transpose() pada python dan hasilnya seperti yang diatas</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="matriks-elementer">
+<section id="matriks-elementer">
 <h1>Matriks Elementer<a class="headerlink" href="#matriks-elementer" title="Link to this heading">#</a></h1>
 <p>Matriks elementer adalah sebuah matriks yang berbentuk persegi yang dikenakan sebuah Operasi Baris Elementer (OBE). Dalam OBE, terdapat 3 operasi dasar. Maka dari itu, terdapat 3 cara untuk membuat matriks elementer, yaitu:</p>
 <ol class="arabic simple">
@@ -609,9 +607,9 @@ baris matriks yang dikalikan</p>
 <li><p>Menambahkan kelipatan suatu baris dengan baris yang lain</p></li>
 </ol>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="matriks-invers">
+<section id="matriks-invers">
 <h1>Matriks Invers<a class="headerlink" href="#matriks-invers" title="Link to this heading">#</a></h1>
-<p>Matriks invers adalah kebalikan dari suatu matriks. jadi jika dilambangkan suatu matriks adalah matriks <span class="math notranslate nohighlight">\(A\)</span> maka kebalikan atau invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> adalah matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span>. Matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> dapat dikatakan invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> jika memenuhi syarat apabila matriks <span class="math notranslate nohighlight">\(A\)</span> dikalikan dengan matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> menghasilkan matriks <span class="math notranslate nohighlight">\(I\)</span> yang mana matriks <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas</p>
+<p>Matriks invers adalah kebalikan dari suatu matriks. jadi jika dilambangkan suatu matriks adalah matriks $A$ maka kebalikan atau invers dari matriks $A$ adalah matriks $A^{-1}$. Matriks $A^{-1}$ dapat dikatakan invers dari matriks $A$ jika memenuhi syarat apabila matriks $A$ dikalikan dengan matriks $A^{-1}$ menghasilkan matriks $I$ yang mana matriks $I$ adalah matriks identitas</p>
 <p>Untuk mencari matriks invers salah satu caranya adalah dengan menggunakan metode eliminasi Gauss-Jordan. Metode Gauss Jordan adalah adalah salah satu metode eliminasi yang digunakan untuk menyelesaikan sistem persamaan linear dan mendapatkan solusi yang diberikan dengan cara diubah menjadi augmented matriks atau matriks yang diperluas yang disederhanakan menjadi bentuk baris yang tereduksi.</p>
 <p>Contoh cara mencari invers matriks menggunakan metode Gauss-Jordan adalah sebagai berikut</p>
 <div class="cell docutils container">
