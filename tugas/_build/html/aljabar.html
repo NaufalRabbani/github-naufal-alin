@@ -448,9 +448,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 7 6]
- [1 7 8]
- [1 8 3]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 2 4]
+ [7 4 3]
+ [4 6 3]]
 </pre></div>
 </div>
 </div>
@@ -539,11 +539,11 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 9 4]
- [7 1 1]]
-[[9 0]
- [6 4]
- [0 7]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3 0 0]
+ [4 4 9]]
+[[0 6]
+ [8 7]
+ [4 0]]
 </pre></div>
 </div>
 </div>
@@ -559,10 +559,10 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[72 64]
- [69 11]]
-[[72 64]
- [69 11]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0 18]
+ [68 52]]
+[[ 0 18]
+ [68 52]]
 </pre></div>
 </div>
 </div>
@@ -603,17 +603,66 @@ baris matriks yang dikalikan</p>
 <section class="tex2jax_ignore mathjax_ignore" id="matriks-elementer">
 <h1>Matriks Elementer<a class="headerlink" href="#matriks-elementer" title="Link to this heading">#</a></h1>
 <p>Matriks elementer adalah sebuah matriks yang berbentuk persegi yang dikenakan sebuah Operasi Baris Elementer (OBE). Dalam OBE, terdapat 3 operasi dasar. Maka dari itu, terdapat 3 cara untuk membuat matriks elementer, yaitu:</p>
-<ol class="arabic simple">
-<li><p>Menukarkan dua baris pada matriks.</p></li>
-<li><p>Mengalikan baris dengan konstanta, selama konstanta tidak sama dengan 0</p></li>
-<li><p>Menambahkan kelipatan suatu baris dengan baris yang lain</p></li>
+<p>1.Menukarkan dua baris pada matriks. <br />
+Dinotasikan dengan <span class="math notranslate nohighlight">\(R_i \leftrightarrow R_j\)</span>,</p>
+<p>Contohnya adalah terdapat sebuah matriks A dengan ukuran <span class="math notranslate nohighlight">\(3 \times 3\)</span> sebagai berikut <br />
+<span class="math notranslate nohighlight">\(\begin {bmatrix}
+2 &amp; 0 &amp; 1 \\
+5 &amp; 8 &amp; 4 \\
+1 &amp; 0 &amp; 2 
+\end {bmatrix}\)</span></p>
+<p>Kita akan tukarkan posisi baris 1 dengan baris 3 dengan menggunakan operasi <span class="math notranslate nohighlight">\(A_1 \leftrightarrow A_3\)</span> maka akan jadi seperti ini <br />
+<span class="math notranslate nohighlight">\(\begin {bmatrix}
+2 &amp; 0 &amp; 1 \\
+5 &amp; 8 &amp; 4 \\
+1 &amp; 0 &amp; 2 
+\end {bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<span class="math notranslate nohighlight">\(\begin {bmatrix}
+1 &amp; 0 &amp; 2 \\
+5 &amp; 8 &amp; 4 \\
+2 &amp; 0 &amp; 1
+\end {bmatrix}\)</span></p>
+<p>2.Mengalikan baris dengan konstanta, selama konstanta tidak sama dengan 0. <br />
+Dinotasikan dengan <span class="math notranslate nohighlight">\(kR_i \rightarrow R_i\)</span></p>
+<p>Contoh terdapat matriks <span class="math notranslate nohighlight">\(I_{2 \times 2}\)</span> yang dimana akan dikenakan operasi <span class="math notranslate nohighlight">\(2R_2 \rightarrow R_2\)</span> maka akan diperoleh hasil seperti berikut</p>
+<p><span class="math notranslate nohighlight">\(\begin {bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end {bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\rightarrow \)</span>
+<span class="math notranslate nohighlight">\(\begin {bmatrix}
+1 &amp; 0 \\
+0 &amp; 2
+\end {bmatrix}\)</span></p>
+<ol class="arabic simple" start="3">
+<li><p>Menambahkan kelipatan suatu baris dengan baris yang lain. <br />
+Dinotasikan dengan <span class="math notranslate nohighlight">\(kR_i + R_j \rightarrow R_j\)</span></p></li>
 </ol>
+<p>contoh terdapat matriks <span class="math notranslate nohighlight">\(I_{3 \times 3}\)</span> dengan dikenakan operasi <span class="math notranslate nohighlight">\(3R_2 + R_3 \rightarrow R_3\)</span> maka diperoleh hasil seperti berikut</p>
+<p><span class="math notranslate nohighlight">\(\begin {bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 
+\end {bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<span class="math notranslate nohighlight">\(\begin {bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 3 &amp; 1 
+\end {bmatrix}\)</span></p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="matriks-invers">
 <h1>Matriks Invers<a class="headerlink" href="#matriks-invers" title="Link to this heading">#</a></h1>
 <p>Matriks invers adalah kebalikan dari suatu matriks. jadi jika dilambangkan suatu matriks adalah matriks <span class="math notranslate nohighlight">\(A\)</span> maka kebalikan atau invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> adalah matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span>. Matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> dapat dikatakan invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> jika memenuhi syarat apabila matriks <span class="math notranslate nohighlight">\(A\)</span> dikalikan dengan matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> menghasilkan matriks <span class="math notranslate nohighlight">\(I\)</span> yang mana matriks <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas</p>
 <p>Untuk mencari matriks invers salah satu caranya adalah dengan menggunakan metode eliminasi Gauss-Jordan. Metode Gauss Jordan adalah adalah salah satu metode eliminasi yang digunakan untuk menyelesaikan sistem persamaan linear dan mendapatkan solusi yang diberikan dengan cara diubah menjadi augmented matriks atau matriks yang diperluas yang disederhanakan menjadi bentuk baris yang tereduksi.</p>
 <p>Contoh cara mencari invers matriks menggunakan metode Gauss-Jordan adalah sebagai berikut</p>
+<p>Diketahui matriks <span class="math notranslate nohighlight">\(A_{3 \times 3}\)</span> sebagai berikut</p>
+<p><span class="math notranslate nohighlight">\(\begin {bmatrix}
+2 &amp; 2 &amp; 1 \\
+4 &amp; 2 &amp; 3 \\
+1 &amp; 3 &amp; -1 
+\end {bmatrix}\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
@@ -629,7 +678,6 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
-<p>Kita gunakan contoh matriks A seperti diatas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
@@ -1000,7 +1048,12 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
-<p>Dengan ini, telah kita peroleh matriks invers dari matriks A</p>
+<p>Dengan ini, telah kita peroleh matriks invers dari matriks A adalah</p>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+-5.5 &amp; 2.5 &amp; 2 \\
+3.5 &amp; -1.5 &amp; -1 \\
+5 &amp; -2 &amp; -2
+\end {bmatrix}\)</span></p>
 </section>
 
     <script type="text/x-thebe-config">
