@@ -448,9 +448,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 4 6]
- [0 8 9]
- [3 5 1]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7 3 5]
+ [7 1 5]
+ [3 9 4]]
 </pre></div>
 </div>
 </div>
@@ -539,11 +539,11 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3 1 2]
- [3 6 8]]
-[[6 3]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0 4 0]
+ [2 5 7]]
+[[9 3]
  [9 2]
- [5 5]]
+ [4 6]]
 </pre></div>
 </div>
 </div>
@@ -559,10 +559,10 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 37  21]
- [112  61]]
-[[ 37  21]
- [112  61]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[36  8]
+ [91 58]]
+[[36  8]
+ [91 58]]
 </pre></div>
 </div>
 </div>
@@ -573,6 +573,8 @@ baris matriks yang dikalikan</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="matriks-transpose">
 <h1>Matriks Transpose<a class="headerlink" href="#matriks-transpose" title="Link to this heading">#</a></h1>
+<p>Matriks transpose matriks yang merupakan hasil dari membalikkan baris dan kolom matriks itu sendiri. Jadi, baris dari matriks transpose adalah kolom dari matriks itu sendiri dan kolom dari matriks transpose adalah baris dari matriks itu sendiri. Misalkan terdapat sebuah matriks A dengan ukuran <span class="math notranslate nohighlight">\(3 \times 2\)</span>, jadi transpose dari matriks A adalah matriks A transpose dengan ukuran <span class="math notranslate nohighlight">\(2 \times 3\)</span></p>
+<p>Penggunaan matriks transpose pada python adalah sebagai berikut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
@@ -596,122 +598,22 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="n">A_T</span>
-<span class="n">C_T</span> <span class="o">=</span> <span class="n">C</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
-<span class="n">COV</span> <span class="o">=</span> <span class="n">C</span> <span class="o">*</span> <span class="n">C_T</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">COV</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">COV</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 625   16    0]
- [  16 4096  441]
- [   0  441   16]]
-(3, 3)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
-<span class="n">A_T</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A_T</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 1]
- [1 2]]
-[[2 1]
- [1 2]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span> <span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
-<span class="n">M_T</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">M_T</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[10  3  5]
- [ 3  7  9]
- [ 5  9 12]]
-[[10  3  5]
- [ 3  7  9]
- [ 5  9 12]]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="n">E</span> <span class="o">=</span> <span class="p">((</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span> <span class="o">*</span> <span class="n">C</span><span class="p">)</span>
-<span class="n">F</span> <span class="o">=</span> <span class="n">E</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">F</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7 3 0]
- [4 8 0]
- [1 3 4]]
-[[9 4 7]
- [4 1 0]
- [6 0 5]]
-[[25  4  0]
- [ 4 64 21]
- [ 0 21  4]]
-[[400  28   0]
- [ 32 576   0]
- [  0  63  36]]
-[[400  32   0]
- [ 28 576  63]
- [  0   0  36]]
-</pre></div>
-</div>
-</div>
-</div>
+<p>Terdapat matriks A dengan ukuran <span class="math notranslate nohighlight">\(3 \times 3\)</span> diatas. Cara menemukan transpose matriks A adalah dengan menggunakan fungsi A.transpose() pada python dan hasilnya seperti yang diatas</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="matriks-elementer">
 <h1>Matriks Elementer<a class="headerlink" href="#matriks-elementer" title="Link to this heading">#</a></h1>
+<p>Matriks elementer adalah sebuah matriks yang berbentuk persegi yang dikenakan sebuah Operasi Baris Elementer (OBE). Dalam OBE, terdapat 3 operasi dasar. Maka dari itu, terdapat 3 cara untuk membuat matriks elementer, yaitu:</p>
+<ol class="arabic simple">
+<li><p>Menukarkan dua baris pada matriks.</p></li>
+<li><p>Mengalikan baris dengan konstanta, selama konstanta tidak sama dengan 0</p></li>
+<li><p>Menambahkan kelipatan suatu baris dengan baris yang lain</p></li>
+</ol>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="matriks-invers">
 <h1>Matriks Invers<a class="headerlink" href="#matriks-invers" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="n">B</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="o">*</span><span class="n">A</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 0]
- [1 1]]
-[[2 0]
- [1 1]]
-</pre></div>
-</div>
-</div>
-</div>
+<p>Matriks invers adalah kebalikan dari suatu matriks. jadi jika dilambangkan suatu matriks adalah matriks <span class="math notranslate nohighlight">\(A\)</span> maka kebalikan atau invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> adalah matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span>. Matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> dapat dikatakan invers dari matriks <span class="math notranslate nohighlight">\(A\)</span> jika memenuhi syarat apabila matriks <span class="math notranslate nohighlight">\(A\)</span> dikalikan dengan matriks <span class="math notranslate nohighlight">\(A^{-1}\)</span> menghasilkan matriks <span class="math notranslate nohighlight">\(I\)</span> yang mana matriks <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas</p>
+<p>Untuk mencari matriks invers salah satu caranya adalah dengan menggunakan metode eliminasi Gauss-Jordan. Metode Gauss Jordan adalah adalah salah satu metode eliminasi yang digunakan untuk menyelesaikan sistem persamaan linear dan mendapatkan solusi yang diberikan dengan cara diubah menjadi augmented matriks atau matriks yang diperluas yang disederhanakan menjadi bentuk baris yang tereduksi.</p>
+<p>Contoh cara mencari invers matriks menggunakan metode Gauss-Jordan adalah sebagai berikut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
@@ -727,6 +629,7 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
+<p>Kita gunakan contoh matriks A seperti diatas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
@@ -780,6 +683,7 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
+<p>Kita akan menggunakan fungsi <strong>RowAdd</strong>, <strong>RowScale</strong>, dan <strong>RowSwap</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -791,9 +695,6 @@ baris matriks yang dikalikan</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.  3. -1.]
  [ 4.  2.  3.]
  [ 2.  2.  1.]]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -933,6 +834,7 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
+<p>Setelah menemukan matriks identitasnya, kita akan lakukan operasi yang sama pada matriks identitas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
@@ -1004,9 +906,6 @@ baris matriks yang dikalikan</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.  0.  1.]
  [ 1.  0. -2.]
  [ 0.  1. -4.]]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -1101,30 +1000,7 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">B2</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B2</span><span class="p">)</span>
-<span class="n">B3</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B3</span><span class="p">)</span>
-<span class="n">B4</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(</span><span class="n">B3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B4</span><span class="p">)</span>
-<span class="n">B5</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">B5</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-    <span class="n">C</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-                <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
-</div>
+<p>Dengan ini, telah kita peroleh matriks invers dari matriks A</p>
 </section>
 
     <script type="text/x-thebe-config">

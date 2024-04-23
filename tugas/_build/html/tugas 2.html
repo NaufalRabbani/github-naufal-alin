@@ -411,7 +411,7 @@ document.write(`
 </section>
 <section id="mencari-matriks-invers-dengan-metode-gauss-jordan">
 <h2>Mencari Matriks Invers dengan metode Gauss-Jordan<a class="headerlink" href="#mencari-matriks-invers-dengan-metode-gauss-jordan" title="Link to this heading">#</a></h2>
-<p>Metode Gauss Jordan adalah adalah salah satu metode eliminasi yang digunakan untuk menyelesaikan sistem persamaan linear dan mendapatkan solusi yang diberikan dengan cara diubah menjadi augmented matriks atau matriks yang diperluas yang a disederhanakan menjadi bentuk baris yang tereduksi
+<p>Metode Gauss Jordan adalah adalah salah satu metode eliminasi yang digunakan untuk menyelesaikan sistem persamaan linear dan mendapatkan solusi yang diberikan dengan cara diubah menjadi augmented matriks atau matriks yang diperluas yang disederhanakan menjadi bentuk baris yang tereduksi
 contohnya diberikan matriks <span class="math notranslate nohighlight">\(A_{3 \times 3}\)</span></p>
 <p><span class="math notranslate nohighlight">\(A=
 \begin{bmatrix}
@@ -908,26 +908,23 @@ x_4 \\
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BI12</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B11</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BI12</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">BI11</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">BI12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">BI12</span> <span class="o">=</span> <span class="n">RowAdd</span><span class="p">(</span><span class="n">B11</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">BI12</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;B11&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[  0.   1.   0. -28.  -8.  -2.   0.   3.]
+ [  0.   0.   1.  49.  13.   4.   0.  -5.]
+ [  0.   0.   0. -11.  -3.  -1.  -1.   2.]
+ [ -1.   0.   0.   9.   2.   1.   0.  -1.]]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BI13</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">B12</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">11</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BI13</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">BI12</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">11</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">BI13</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1085,6 +1082,7 @@ x_4 \\
 </div>
 </div>
 </div>
+<p>Sekarang kita cek menggunakan fungsi <strong>NumPy</strong> pada python</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
