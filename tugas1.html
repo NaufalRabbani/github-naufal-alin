@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -403,10 +405,10 @@ document.write(`
   <section id="sistem-persamaaan-linear">
 <h1>Sistem Persamaaan Linear<a class="headerlink" href="#sistem-persamaaan-linear" title="Link to this heading">#</a></h1>
 <p>Persamaan linear adalah persamaan matematika yang menggambarkan hubungan linear antara variabel-variabelnya. Secara umum, persamaan linear dapat ditulis dalam bentuk:</p>
-<p>$ y=mx+by=mx+b $</p>
-<p>di mana $y$ adalah variabel dependen, $x$ adalah variabel independen, $m$ adalah kemiringan (slope), dan $b$ adalah perpotongan dengan sumbu $y$ (y-intercept). Persamaan ini menggambarkan garis lurus pada bidang Cartesius. Dalam konteks yang lebih umum, persamaan linear dapat memiliki lebih dari satu variabel dan dapat diwakili dalam bentuk umum:</p>
-<p>$a_1x_1+a_2x_2+…+a_nx_n=b$</p>
-<p>di mana $a_1,a_2,…,a_n​$ adalah koefisien, $x_1,x_2,…,x_n$​ adalah variabel-variabel, dan bb adalah konstanta. Persamaan linear ini bisa menggambarkan hubungan linear antara lebih dari satu variabel.</p>
+<p><span class="math notranslate nohighlight">\( y=mx+by=mx+b \)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(y\)</span> adalah variabel dependen, <span class="math notranslate nohighlight">\(x\)</span> adalah variabel independen, <span class="math notranslate nohighlight">\(m\)</span> adalah kemiringan (slope), dan <span class="math notranslate nohighlight">\(b\)</span> adalah perpotongan dengan sumbu <span class="math notranslate nohighlight">\(y\)</span> (y-intercept). Persamaan ini menggambarkan garis lurus pada bidang Cartesius. Dalam konteks yang lebih umum, persamaan linear dapat memiliki lebih dari satu variabel dan dapat diwakili dalam bentuk umum:</p>
+<p><span class="math notranslate nohighlight">\(a_1x_1+a_2x_2+…+a_nx_n=b\)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(a_1,a_2,…,a_n​\)</span> adalah koefisien, <span class="math notranslate nohighlight">\(x_1,x_2,…,x_n\)</span>​ adalah variabel-variabel, dan bb adalah konstanta. Persamaan linear ini bisa menggambarkan hubungan linear antara lebih dari satu variabel.</p>
 <section id="contoh-persamaan-linear">
 <h2>Contoh persamaan linear<a class="headerlink" href="#contoh-persamaan-linear" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -432,9 +434,9 @@ document.write(`
 </div>
 </div>
 <p>Jadi, ketiga persamaan linier tiga variabel diatas adalah sebagai berikut</p>
-<p>$ 8x_1 + 9x_2 + x_3 = 19 $</p>
-<p>$ x_1 + 2x_2 + 3x_3 = 9 $</p>
-<p>$ 2x_1 + x_2 + x_3 = 5 $</p>
+<p><span class="math notranslate nohighlight">\( 8x_1 + 9x_2 + x_3 = 19 \)</span></p>
+<p><span class="math notranslate nohighlight">\( x_1 + 2x_2 + 3x_3 = 9 \)</span></p>
+<p><span class="math notranslate nohighlight">\( 2x_1 + x_2 + x_3 = 5 \)</span></p>
 </section>
 </section>
 <section id="eliminasi-gauss">
@@ -450,9 +452,9 @@ document.write(`
 <section id="contoh-penerapan-eliminasi-gauss">
 <h2>contoh penerapan eliminasi Gauss<a class="headerlink" href="#contoh-penerapan-eliminasi-gauss" title="Link to this heading">#</a></h2>
 <p>Untuk penerapan eliminasi Gauss, saya kita bisa mengambil contoh persamaan linier yang diatas</p>
-<p>$ 8x_1 + 9x_2 + x_3 = 19 $</p>
-<p>$ x_1 + 2x_2 + 3x_3 = 9 $</p>
-<p>$ 2x_1 + x_2 + x_3 = 5 $</p>
+<p><span class="math notranslate nohighlight">\( 8x_1 + 9x_2 + x_3 = 19 \)</span></p>
+<p><span class="math notranslate nohighlight">\( x_1 + 2x_2 + 3x_3 = 9 \)</span></p>
+<p><span class="math notranslate nohighlight">\( 2x_1 + x_2 + x_3 = 5 \)</span></p>
 <p>Pertama-tama kita menulis kode program untuk digunakan pada perhitungan persamaan linier dengan cara eliminasi Gauss</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -593,7 +595,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Tahap keenam yaitu mengalikan persamaan-3 dengan 1/4.85714286 (agar nilai $x_3$ persamaan ke-3 bernilai 1)</p>
+<p>Tahap keenam yaitu mengalikan persamaan-3 dengan 1/4.85714286 (agar nilai <span class="math notranslate nohighlight">\(x_3\)</span> persamaan ke-3 bernilai 1)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A6</span> <span class="o">=</span> <span class="n">RowScale</span><span class="p">(</span><span class="n">A5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="mf">4.85714286</span><span class="p">)</span>
@@ -610,10 +612,10 @@ document.write(`
 </div>
 </div>
 <p>Setelah dilakukan penghitungan akan didapatkan persamaan sebagai berikut</p>
-<p>$ x_1 + 2x_2 + 3x_3 = 9$</p>
-<p>$x_2 + 3.28571429x_3 = 7.57142857$</p>
-<p>$x_3 = 2 $</p>
-<p>Maka, bisa didapat bahwa nilai dari $x_3$ adalah $2$. Dengan begitu kita bisa mencari nilai $x_1$ dan $x_2$ dengan cara substitusi sebagai berikut</p>
+<p><span class="math notranslate nohighlight">\( x_1 + 2x_2 + 3x_3 = 9\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_2 + 3.28571429x_3 = 7.57142857\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_3 = 2 \)</span></p>
+<p>Maka, bisa didapat bahwa nilai dari <span class="math notranslate nohighlight">\(x_3\)</span> adalah <span class="math notranslate nohighlight">\(2\)</span>. Dengan begitu kita bisa mencari nilai <span class="math notranslate nohighlight">\(x_1\)</span> dan <span class="math notranslate nohighlight">\(x_2\)</span> dengan cara substitusi sebagai berikut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x3</span> <span class="o">=</span> <span class="mi">2</span>
@@ -641,16 +643,16 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Jadi, bisa didapat nilai dari $x_1$, $x_2$, dan $x_3$ sebagai berikut</p>
-<p>$ x_1 = 1\
-x_2 = 1\
-x_3 = 2\
-$</p>
+<p>Jadi, bisa didapat nilai dari <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, dan <span class="math notranslate nohighlight">\(x_3\)</span> sebagai berikut</p>
+<p><span class="math notranslate nohighlight">\( x_1 = 1\\
+  x_2 = 1\\
+  x_3 = 2\\
+  \)</span></p>
 <p>Contoh persamaan yang lain dengan menggunakan 4 variabel</p>
-<p>$ 2x_1 + 3x_2 - x_3 + 4x_4 = 10 $</p>
-<p>$ x_1 −2x_2 + 4x_3 − 3x_4 = 5 $</p>
-<p>$ 3x_1 + x_2 + 2x_3 − 2x_4 = 7 $</p>
-<p>$ 4x_1 − x_2 − x_3 + 2x_4 = 8 $</p>
+<p><span class="math notranslate nohighlight">\( 2x_1 + 3x_2 - x_3 + 4x_4 = 10 \)</span></p>
+<p><span class="math notranslate nohighlight">\( x_1 −2x_2 + 4x_3 − 3x_4 = 5 \)</span></p>
+<p><span class="math notranslate nohighlight">\( 3x_1 + x_2 + 2x_3 − 2x_4 = 7 \)</span></p>
+<p><span class="math notranslate nohighlight">\( 4x_1 − x_2 − x_3 + 2x_4 = 8 \)</span></p>
 <p>Persamaan diatas akan saya selesaikan menggunakan eliminasi Gauss</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -797,10 +799,10 @@ $</p>
 </div>
 </div>
 </div>
-<p>Dengan begini kita bisa menemukan nilai dari $x_4$ yaitu $\frac{52}{28}$ atau $\frac{13}{7}$</p>
-<p>Setelah itu, kita bisa mencari nilai $x_1, x_2,$ dan $x_3$ dengan substitusi mundur</p>
-<p>$-x_3 - 3x_4 = -8$ <br />
-$x_3 + 3x_4 = 8$</p>
+<p>Dengan begini kita bisa menemukan nilai dari <span class="math notranslate nohighlight">\(x_4\)</span> yaitu <span class="math notranslate nohighlight">\(\frac{52}{28}\)</span> atau <span class="math notranslate nohighlight">\(\frac{13}{7}\)</span></p>
+<p>Setelah itu, kita bisa mencari nilai <span class="math notranslate nohighlight">\(x_1, x_2,\)</span> dan <span class="math notranslate nohighlight">\(x_3\)</span> dengan substitusi mundur</p>
+<p><span class="math notranslate nohighlight">\(-x_3 - 3x_4 = -8\)</span> <br />
+<span class="math notranslate nohighlight">\(x_3 + 3x_4 = 8\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x4</span> <span class="o">=</span> <span class="mi">13</span><span class="o">/</span><span class="mi">7</span>
@@ -821,9 +823,9 @@ $x_3 + 3x_4 = 8$</p>
 </div>
 </div>
 </div>
-<p>$x_3 = \frac{17}{7}$</p>
-<p>$ x_2 - 1.28571429x_3 + 1.42857143x_4 = 0$ (dikali 7) <br />
-$ 7x_2 - 9x_3 + 10x_4 = 0 $</p>
+<p><span class="math notranslate nohighlight">\(x_3 = \frac{17}{7}\)</span></p>
+<p><span class="math notranslate nohighlight">\( x_2 - 1.28571429x_3 + 1.42857143x_4 = 0\)</span> (dikali 7) <br />
+<span class="math notranslate nohighlight">\( 7x_2 - 9x_3 + 10x_4 = 0 \)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x3</span> <span class="o">=</span> <span class="mf">2.428571428571429</span>
@@ -841,8 +843,8 @@ $ 7x_2 - 9x_3 + 10x_4 = 0 $</p>
 </div>
 </div>
 </div>
-<p>$x_2 = \frac{23}{49}$</p>
-<p>$x_1 - 2x_2 + 4x_3 - 3x_4 = 5$</p>
+<p><span class="math notranslate nohighlight">\(x_2 = \frac{23}{49}\)</span></p>
+<p><span class="math notranslate nohighlight">\(x_1 - 2x_2 + 4x_3 - 3x_4 = 5\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">x3</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x4</span>
@@ -858,7 +860,7 @@ $ 7x_2 - 9x_3 + 10x_4 = 0 $</p>
 </div>
 </div>
 </div>
-<p>Jadi, nilai dari $x_1, x_2, x_3, x_4$ adalah $ \frac{88}{49} $, $ \frac{23}{49}$, $\frac{17}{7}$, $\frac{13}{7}$</p>
+<p>Jadi, nilai dari <span class="math notranslate nohighlight">\(x_1, x_2, x_3, x_4\)</span> adalah <span class="math notranslate nohighlight">\( \frac{88}{49} \)</span>, <span class="math notranslate nohighlight">\( \frac{23}{49}\)</span>, <span class="math notranslate nohighlight">\(\frac{17}{7}\)</span>, <span class="math notranslate nohighlight">\(\frac{13}{7}\)</span></p>
 </section>
 </section>
 
