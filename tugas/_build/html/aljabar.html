@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'aljabar';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas Video" href="tugasvideo.html" />
+    <link rel="next" title="Tutorial Membuat Web Statis Menggunakan Jupyter-book" href="tugasvideo.html" />
     <link rel="prev" title="Matriks Invers" href="tugas%202.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -186,7 +186,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="tugasvideo.html">Tugas Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugasvideo.html">Tutorial Membuat Web Statis Menggunakan Jupyter-book</a></li>
 </ul>
 
     </div>
@@ -448,9 +448,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5 2 4]
- [7 4 3]
- [4 6 3]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4 4 3]
+ [4 5 3]
+ [9 0 1]]
 </pre></div>
 </div>
 </div>
@@ -539,11 +539,77 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3 0 0]
- [4 4 9]]
-[[0 6]
- [8 7]
- [4 0]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[7 8 6]
+ [1 1 4]]
+[[8 3]
+ [6 1]
+ [1 8]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mA</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+<span class="p">]</span>
+<span class="n">mB</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A&quot;</span><span class="p">,</span> <span class="n">mA</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks B&quot;</span><span class="p">,</span> <span class="n">mB</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Panjang baris dan kolom&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks A&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mA</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">mA</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks B&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mB</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">mB</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># x adalah panjang baris matriks A</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mA</span><span class="p">)</span>
+
+<span class="c1"># y adalah panjang kolom pertama matriks A</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mA</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># z adalah panjang baris pertama matriks B</span>
+<span class="n">z</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mB</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># perulangan yang terjadi sebanyak baris mA</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">hasil1</span><span class="o">=</span><span class="p">[]</span>
+    <span class="c1">#perulangan yang terjadi sebanyak kolom mB </span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+        <span class="n">jumlah</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+            <span class="n">jumlah</span> <span class="o">+=</span> <span class="n">mA</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">mB</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">hasil1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">jumlah</span><span class="p">)</span>
+    <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hasil1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hasil dari perkalian matriks&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks A [[4, 2, 1], [0, 8, 7]] 
+
+Matriks B [[0, 5], [2, 2], [6, 5]] 
+
+Panjang baris dan kolom
+Matriks A
+2 3 
+
+Matriks B
+3 2 
+
+hasil dari perkalian matriks
+[[10, 29], [58, 51]] 
 </pre></div>
 </div>
 </div>
@@ -559,10 +625,10 @@ baris matriks yang dikalikan</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0 18]
- [68 52]]
-[[ 0 18]
- [68 52]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[110  77]
+ [ 18  36]]
+[[110  77]
+ [ 18  36]]
 </pre></div>
 </div>
 </div>
@@ -1054,6 +1120,14 @@ Dinotasikan dengan <span class="math notranslate nohighlight">\(kR_i + R_j \righ
 3.5 &amp; -1.5 &amp; -1 \\
 5 &amp; -2 &amp; -2
 \end {bmatrix}\)</span></p>
+<p>Referensi</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.ruangguru.com/blog/mengenal-matriks-dalam-matematika-pengertian-jenis-dan-transpose">https://www.ruangguru.com/blog/mengenal-matriks-dalam-matematika-pengertian-jenis-dan-transpose</a></p></li>
+<li><p><a class="reference external" href="https://gdscuniversitasmulia.medium.com/eliminasi-gauss-jordan-79b87e67befd">https://gdscuniversitasmulia.medium.com/eliminasi-gauss-jordan-79b87e67befd</a></p></li>
+<li><p><a class="reference external" href="https://www.profematika.com/definisi-matriks-elementer-dan-sifatnya/#google_vignette">https://www.profematika.com/definisi-matriks-elementer-dan-sifatnya/#google_vignette</a></p></li>
+<li><p><a class="reference external" href="https://aljabarlinear.mipa.ugm.ac.id/soal/uts-uas/eleminasi-gauss-jordan/">https://aljabarlinear.mipa.ugm.ac.id/soal/uts-uas/eleminasi-gauss-jordan/</a></p></li>
+<li><p><a class="reference external" href="https://akupintar.id/info-pintar/-/blogs/matriks-pengertian-operasi-determinan-invers-dan-contoh-soal">https://akupintar.id/info-pintar/-/blogs/matriks-pengertian-operasi-determinan-invers-dan-contoh-soal</a></p></li>
+</ol>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1100,7 +1174,7 @@ Dinotasikan dengan <span class="math notranslate nohighlight">\(kR_i + R_j \righ
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tugas Video</p>
+        <p class="prev-next-title">Tutorial Membuat Web Statis Menggunakan Jupyter-book</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
