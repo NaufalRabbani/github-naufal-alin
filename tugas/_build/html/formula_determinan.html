@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tutorial Membuat Web Statis Menggunakan Jupyter-book &#8212; My sample book</title>
+    <title>Formula Determinan &#8212; My sample book</title>
   
   
   
@@ -57,11 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugasvideo';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'formula_determinan';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Determinan" href="determinan.html" />
-    <link rel="prev" title="Aljabar Matriks" href="aljabar.html" />
+    <link rel="prev" title="Determinan" href="determinan.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,9 +185,9 @@
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tutorial Membuat Web Statis Menggunakan Jupyter-book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugasvideo.html">Tutorial Membuat Web Statis Menggunakan Jupyter-book</a></li>
 <li class="toctree-l1"><a class="reference internal" href="determinan.html">Determinan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="formula_determinan.html">Formula Determinan</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Formula Determinan</a></li>
 </ul>
 
     </div>
@@ -258,7 +259,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugasvideo.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fformula_determinan.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +289,7 @@
       
       
       
-      <li><a href="_sources/tugasvideo.md" target="_blank"
+      <li><a href="_sources/formula_determinan.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -298,7 +299,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -372,7 +373,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial Membuat Web Statis Menggunakan Jupyter-book</h1>
+    <h1>Formula Determinan</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,7 +383,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil">Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-kofaktor">Ekspansi Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penggunaan-ekspansi-kofaktor">Penggunaan ekspansi kofaktor</a></li>
 </ul>
             </nav>
         </div>
@@ -394,13 +396,60 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-membuat-web-statis-menggunakan-jupyter-book">
-<h1>Tutorial Membuat Web Statis Menggunakan Jupyter-book<a class="headerlink" href="#tutorial-membuat-web-statis-menggunakan-jupyter-book" title="Link to this heading">#</a></h1>
-<p>Membuat video cara membuat website statis menggunakan jupyter-book</p>
-<section id="hasil">
-<h2>Hasil<a class="headerlink" href="#hasil" title="Link to this heading">#</a></h2>
-<p>Berikut hasil tugas saya
-<a class="reference external" href="https://youtu.be/1lSw1kcI2Vc?si=wvmWQzVVJ7nfyizO">Link video</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="formula-determinan">
+<h1>Formula Determinan<a class="headerlink" href="#formula-determinan" title="Link to this heading">#</a></h1>
+<section id="ekspansi-kofaktor">
+<h2>Ekspansi Kofaktor<a class="headerlink" href="#ekspansi-kofaktor" title="Link to this heading">#</a></h2>
+<p>Ekspansi kofaktor adalah salah satu cara untuk mencari determinan suatu matriks dengan cara membagi matriks tersebut menjadi matriks minor, yaitu menghilangkan suatu baris dan kolom matriks utama yang mengacu pada suatu elemen tertentu dalam matriks</p>
+</section>
+<section id="penggunaan-ekspansi-kofaktor">
+<h2>Penggunaan ekspansi kofaktor<a class="headerlink" href="#penggunaan-ekspansi-kofaktor" title="Link to this heading">#</a></h2>
+<p>Untuk contoh penggunaan ekspansi kofaktor kita bisa menggunakan matriks 4x4 adalah sebagai berikut</p>
+<p><span class="math notranslate nohighlight">\(A = \begin {bmatrix}
+2 &amp; -1 &amp; 0 &amp; 3 \\
+0 &amp; 1 &amp; 2 &amp; -3 \\
+-1 &amp; 0 &amp; 3 &amp; 1 \\
+4 &amp; 2 &amp; 0 &amp; -1 
+\end {bmatrix}\)</span></p>
+<p>Diketahui matrik A seperti diatas. Langkah pertama yaang harus kita lakukan adalah menentukan matriks matriks minor dari matriks A diatas. Contohnya yang akan saya gunakan adalah matriks <span class="math notranslate nohighlight">\(A_{11}, A_{21}, A_{31}, A_{41}\)</span></p>
+<p><span class="math notranslate nohighlight">\(A_{11} = \begin {bmatrix}
+ 1 &amp; 2 &amp; 3 \\
+ 0 &amp; 3 &amp; 1 \\
+ 2 &amp; 0 &amp; 1
+\end {bmatrix} \)</span></p>
+<p><span class="math notranslate nohighlight">\(A_{21} = \begin {bmatrix}
+-1 &amp; 0 &amp; 3 \\
+0 &amp; 3 &amp; 1 \\
+2 &amp; 0 &amp; -1 
+\end {bmatrix}\)</span></p>
+<p><span class="math notranslate nohighlight">\(A_{31} = \begin {bmatrix}
+-1 &amp; 0 &amp; 3 \\
+1 &amp; 2 &amp; -3 \\
+2 &amp; 0 &amp; -1 
+\end {bmatrix} \)</span></p>
+<p><span class="math notranslate nohighlight">\(A_{41} = \begin {bmatrix}
+-1 &amp; 0 &amp; 3 \\
+1 &amp; 2 &amp; -3 \\
+0 &amp; 3 &amp; 1
+\end {bmatrix} \)</span></p>
+<p>Setelah matriks minor seperti diatas, selanjutnya adalah mencari kofaktor dan determinan dari matriks minor diatas</p>
+<p><span class="math notranslate nohighlight">\(det(A_{11}) = (m_{11} . c_{11}) + (m_{21} . c_{21}) + (m_{31} . c_{31}) \\
+= (1 . (-1^{1+1} . det \begin{bmatrix} 3 &amp; 1 \\ 0 &amp; 1 \end {bmatrix} )) + (0 . (-1^{2+1} . det \begin{bmatrix} 2 &amp; 3 \\ 0 &amp; 1 \end{bmatrix})) + (2 . (-1^{3+1}. det \begin{bmatrix} 2 &amp; 3 \\ 3 &amp; 1 \end{bmatrix} )) = -11 \\ \)</span></p>
+<p><span class="math notranslate nohighlight">\(det(A_{21}) = (m_{11} . c_{11}) + (m_{12} . c_{12}) + (m_{13} . c_{13}) \\
+= ((-1) . ((-1^{1+1}) . det \begin{bmatrix} 3 &amp; 1 \\ 0 &amp; -1 \end{bmatrix}) + (0 . (-1^{2+1}) . det \begin{bmatrix} 0 &amp; 3 \\ 0 &amp; -1 \end {bmatrix}) + (2 . ((-1^{3+1}) . det \begin{bmatrix} 0 &amp; 3 \\ 3 &amp; 1 \end{bmatrix})) = -15 \)</span></p>
+<p><span class="math notranslate nohighlight">\(det(A_{31}) = (m_{11} . c_{11}) + (m_{12} . c_{12}) + (m_{13} . c_{13})\\
+= ((-1) . ((-1^{1+1}) . det \begin{bmatrix} 2 &amp; -3 \\ 0 &amp; -1 \end{bmatrix})) + (0 . ((-1^{1+2}) . det \begin{bmatrix} 1 &amp; 2 \\ -3 &amp; -1 \end{bmatrix})) + (3 . ((-1^{1+3}) . det \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 0 \end{bmatrix})) = -10 \)</span></p>
+<p><span class="math notranslate nohighlight">\(det(A_{41}) = (m_{11} . c_{11}) + (m_{21} . c_{21}) + (m_{31} . c_{31}) \\
+= ((-1) . (-1^{1+1}). det \begin{bmatrix} 2 &amp; -3 \\ 3 &amp; 1 \end{bmatrix}) + (1 . ((-1^{2+1}) . det \begin{bmatrix} 0 &amp; -3 \\ 3 &amp; 1 \end{bmatrix})) + (0 . ((-1^{3+1}) . det \begin{bmatrix} 0 &amp; -3 \\ 2 &amp; -3 \end{bmatrix})) = 16 \)</span></p>
+<p>Setelah menemukan determinan dari matriks minor diatas, selanjutnya adalah mencari kofaktornya</p>
+<p><span class="math notranslate nohighlight">\(C_{11} = (-1^{1+1} . det (A_{11})) = 1 . (-11) = -11 \)</span></p>
+<p><span class="math notranslate nohighlight">\(C_{21} = (-1^{2+1}.det(A_{21})) = -1.(-15) = 15\)</span></p>
+<p><span class="math notranslate nohighlight">\(C_{31} = (-1^{3+1}.det(A_{31})) = 1.(-10) = -10 \)</span></p>
+<p><span class="math notranslate nohighlight">\(C_{41} = (-1^{4+1}.det(A_{41})) = -1.16  = -16\)</span></p>
+<p>Setelah ketemu kofaktor maka bisa dicari nilai dari determinan matriks <span class="math notranslate nohighlight">\(A\)</span></p>
+<p><span class="math notranslate nohighlight">\(det(A) = (a_{11} . c_{11}) + (a_{21} . c_{21}) + (a_{31} . c_{31}) + (a_{41} . c_{41})\\
+= (2 . (-11)) + (0 . 15) + ((-1) . (-10)) + (4 . (-16)) = -76 \)</span></p>
+<p>Jadi, determinan dari matriks <span class="math notranslate nohighlight">\(A\)</span> adalah <span class="math notranslate nohighlight">\(-76\)</span></p>
 </section>
 </section>
 
@@ -435,22 +484,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="aljabar.html"
+       href="determinan.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Aljabar Matriks</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="determinan.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Determinan</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -468,7 +508,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil">Hasil</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ekspansi-kofaktor">Ekspansi Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penggunaan-ekspansi-kofaktor">Penggunaan ekspansi kofaktor</a></li>
 </ul>
   </nav></div>
 
