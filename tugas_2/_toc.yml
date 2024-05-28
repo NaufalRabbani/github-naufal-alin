@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: tugasvideo
+- file: tugas1
+- file: aljabar
+- file: tugas 2
+- file: determinan
+- file: formula_determinan
+- file: transform
